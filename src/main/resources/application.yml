@@ -1,15 +1,11 @@
 spring:
   application:
-    name: orders-management-service
+    name: car-service
 
   # COSMOS DB Configuration
   data:
-    cosmos:
-      uri: https://azdevdb.documents.azure.com:443/
-      key: rXLHdmoDi0GSqL0S0zYbHhsDtNePHZRmQSJATH3bnftx54K1EhokJ8g4jdYu8qBkFJPiBUw3Db1YACDbaHN2ag==
-      database: cosmodb
-      populate-query-metrics: true
-
+    mongodb:
+      uri: ${AZURE_COSMOS_MONGODB_URI}
   # H2 Database Configuration (commented out)
 #  datasource:
 #    url: jdbc:h2:mem:orderdb
