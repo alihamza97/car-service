@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(containerName = "orders")
+@Document
 public class Car {
 
     @Id
