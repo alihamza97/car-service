@@ -58,6 +58,7 @@ Create a `.env` file or update `application.properties` with your MongoDB connec
 
 
 # Array of car names
+```
 car_names=("Toyota Camry" "Honda Civic" "Ford Mustang" "BMW 3 Series" "Mercedes C-Class"
            "Audi A4" "Tesla Model 3" "Chevrolet Malibu" "Nissan Altima" "Mazda 6"
            "Hyundai Sonata" "Kia Optima" "Volkswagen Passat" "Subaru Legacy" "Lexus ES")
