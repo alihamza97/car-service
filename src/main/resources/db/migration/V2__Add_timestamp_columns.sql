@@ -1,0 +1,9 @@
+---- Add timestamp columns to existing cars table
+--ALTER TABLE cars ADD created_at DATETIME2 DEFAULT GETDATE();
+--ALTER TABLE cars ADD updated_at DATETIME2;
+--
+---- Set created_at for existing rows (if any)
+--UPDATE cars SET created_at = GETDATE() WHERE created_at IS NULL;
+--
+---- Make created_at NOT NULL after setting values
+--ALTER TABLE cars ALTER COLUMN created_at DATETIME2 NOT NULL;

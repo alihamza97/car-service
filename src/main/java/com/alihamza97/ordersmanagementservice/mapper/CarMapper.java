@@ -5,8 +5,6 @@ import com.alihamza97.ordersmanagementservice.dto.CarResponse;
 import com.alihamza97.ordersmanagementservice.model.Car;
 import org.springframework.stereotype.Component;
 
-import java.util.UUID;
-
 
 @Component
 public class CarMapper {
