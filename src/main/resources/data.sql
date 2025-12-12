@@ -1,5 +1,0 @@
---INSERT INTO orders (customer_name, customer_email, total_amount, status, created_at, updated_at)
---VALUES
---    ('John Doe', 'john.doe@email.com', 99.99, 'PENDING', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
---    ('Jane Smith', 'jane.smith@email.com', 149.50, 'CONFIRMED', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
---    ('Bob Johnson', 'bob.johnson@email.com', 299.99, 'SHIPPED', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
