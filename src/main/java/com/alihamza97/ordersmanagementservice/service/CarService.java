@@ -25,13 +25,12 @@ public class CarService {
         return cars;
     }
 
-    public Car getById(String id) {
+    public Car getById(Long id) {
         log.debug("Searching for car with id: {}", id);
-        Car car = carRepository.findById(id)
-                .orElseThrow(() -> {
-                    log.error("Car not found with id: {}", id);
-                    return new RuntimeException("Car not found");
-                });
+        Car car = carRepository.findById(id).orElseThrow(() -> {
+            log.error("Car not found with id: {}", id);
+            return new RuntimeException("Car not found");
+        });
         log.debug("Successfully found car with id: {}", id);
         return car;
     }

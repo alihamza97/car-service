@@ -36,7 +36,7 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Car> getCarById(@PathVariable String id) {
+    public ResponseEntity<Car> getCarById(@PathVariable Long id) {
         log.info("Fetching car with id: {}", id);
         Car car = carService.getById(id);
         log.info("Successfully retrieved car with id: {}", id);

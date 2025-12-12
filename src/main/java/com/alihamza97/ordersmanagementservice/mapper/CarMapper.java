@@ -17,7 +17,6 @@ public class CarMapper {
         }
 
         Car car = new Car();
-        car.setId(UUID.randomUUID().toString());
         car.setCarName(req.getCarName());
         car.setCarModel(req.getCarModel());
         car.setCarPrice(req.getCarPrice());

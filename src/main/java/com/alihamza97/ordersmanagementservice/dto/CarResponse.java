@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CarResponse {
-    private String id;
+    private Long id;
     private String carName;
     private String carModel;
     private String carPrice;

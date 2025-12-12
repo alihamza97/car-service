@@ -1,26 +1,32 @@
 package com.alihamza97.ordersmanagementservice.model;
 
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+@Entity
 @Getter
 @Setter
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "cars")
+@Table(name = "cars")
 public class Car {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    @Column(name = "car_name")
     private String carName;
 
+    @Column(name = "car_model")
     private String carModel;
 
+    @Column(name = "car_price")
     private String carPrice;
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "condition")
     private CarCondition condition;
 
 
