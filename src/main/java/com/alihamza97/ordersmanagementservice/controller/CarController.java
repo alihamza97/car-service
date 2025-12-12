@@ -3,6 +3,7 @@ package com.alihamza97.ordersmanagementservice.controller;
 import com.alihamza97.ordersmanagementservice.dto.CarRequest;
 import com.alihamza97.ordersmanagementservice.model.Car;
 import com.alihamza97.ordersmanagementservice.service.CarService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class CarController {
     private final CarService carService;
 
     @PostMapping
-    public ResponseEntity<Car> createOrder(@RequestBody CarRequest request) {
+    public ResponseEntity<Car> createOrder(@Valid @RequestBody CarRequest request) {
         log.info("Creating new car order with request: {}", request);
         Car createdCar = carService.createCar(request);
         log.info("Successfully created car with id: {}", createdCar.getId());

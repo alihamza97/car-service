@@ -1,6 +1,8 @@
 package com.alihamza97.ordersmanagementservice.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -20,12 +22,15 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Car name cannot be empty")
     @Column(name = "car_name", nullable = false, length = 100)
     private String carName;
 
+    @NotBlank(message = "Car model cannot be empty")
     @Column(name = "car_model", nullable = false, length = 100)
     private String carModel;
 
+    @NotNull(message = "Car price is required")
     @Column(name = "car_price", nullable = false, precision = 10, scale = 2)
     private BigDecimal carPrice;
 
