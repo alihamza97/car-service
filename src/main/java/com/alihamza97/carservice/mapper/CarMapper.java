@@ -1,8 +1,8 @@
-package com.alihamza97.ordersmanagementservice.mapper;
+package com.alihamza97.carservice.mapper;
 
-import com.alihamza97.ordersmanagementservice.dto.CarRequest;
-import com.alihamza97.ordersmanagementservice.dto.CarResponse;
-import com.alihamza97.ordersmanagementservice.model.Car;
+import com.alihamza97.carservice.dto.CarRequest;
+import com.alihamza97.carservice.dto.CarResponse;
+import com.alihamza97.carservice.model.Car;
 import org.springframework.stereotype.Component;
 
 

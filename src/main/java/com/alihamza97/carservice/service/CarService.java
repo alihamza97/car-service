@@ -1,9 +1,9 @@
-package com.alihamza97.ordersmanagementservice.service;
+package com.alihamza97.carservice.service;
 
-import com.alihamza97.ordersmanagementservice.dto.CarRequest;
-import com.alihamza97.ordersmanagementservice.mapper.CarMapper;
-import com.alihamza97.ordersmanagementservice.model.Car;
-import com.alihamza97.ordersmanagementservice.repository.CarRepository;
+import com.alihamza97.carservice.dto.CarRequest;
+import com.alihamza97.carservice.mapper.CarMapper;
+import com.alihamza97.carservice.model.Car;
+import com.alihamza97.carservice.repository.CarRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

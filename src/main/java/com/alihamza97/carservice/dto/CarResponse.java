@@ -1,6 +1,6 @@
-package com.alihamza97.ordersmanagementservice.dto;
+package com.alihamza97.carservice.dto;
 
-import com.alihamza97.ordersmanagementservice.model.CarCondition;
+import com.alihamza97.carservice.model.CarCondition;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,8 @@
-package com.alihamza97.ordersmanagementservice.controller;
+package com.alihamza97.carservice.controller;
 
-import com.alihamza97.ordersmanagementservice.dto.CarRequest;
-import com.alihamza97.ordersmanagementservice.model.Car;
-import com.alihamza97.ordersmanagementservice.service.CarService;
+import com.alihamza97.carservice.dto.CarRequest;
+import com.alihamza97.carservice.model.Car;
+import com.alihamza97.carservice.service.CarService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

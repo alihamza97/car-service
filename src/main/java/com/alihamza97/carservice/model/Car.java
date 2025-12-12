@@ -1,4 +1,4 @@
-package com.alihamza97.ordersmanagementservice.model;
+package com.alihamza97.carservice.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
