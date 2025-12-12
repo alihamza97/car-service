@@ -55,7 +55,10 @@ mvn spring-boot:run
 
 Create a `.env` file or update `application.properties` with your MongoDB connection details.
 
-```
+
+
+##(SQL ONLY)
+
 
 ## Run the curl to post data via rest endpoint in bulk to database or you can add it manually
 
