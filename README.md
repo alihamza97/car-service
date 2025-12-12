@@ -246,9 +246,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👤 Author
 
 **Ali Hamza**
-- GitHub: [@alihamza97](https://github.com/alihamza97)
 
-## 📞 Support
 
 For issues or questions, please open an issue on the [GitHub repository](https://github.com/alihamza97/car-service/issues).
 
