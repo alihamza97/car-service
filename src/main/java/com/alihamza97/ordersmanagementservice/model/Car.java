@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@Document
+@Document(collection = "cars")
 public class Car {
 
     @Id
