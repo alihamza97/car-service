@@ -18,12 +18,19 @@ public class CarService {
     private final CarRepository carRepository;
     private final CarMapper carMapper;
 
-    public List<Car> getAll() {
+        public List<Car> getAll() {
         log.debug("Retrieving all cars from database");
         List<Car> cars = carRepository.findAll();
         log.debug("Found {} cars", cars.size());
         return cars;
     }
+//    public Page<Car> getAll(int pageNumber,int size) {
+//        log.debug("Retrieving all cars from database");
+//        Pageable pageable= PageRequest.of(pageNumber,size);
+//        Page<Car> cars = carRepository.findAll(pageable);
+////        log.debug("Found {} cars", cars.size());
+//        return cars;
+//    }
 
     public Car getById(Long id) {
         log.debug("Searching for car with id: {}", id);
