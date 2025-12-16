@@ -1,10 +1,10 @@
-package com.alihamza97.ordersmanagementservice;
+package com.alihamza97.carservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OrdersManagementServiceApplicationTests {
+class CarServiceApplicationTests {
 
     @Test
     void contextLoads() {

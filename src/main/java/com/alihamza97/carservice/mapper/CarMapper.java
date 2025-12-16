@@ -1,12 +1,9 @@
-package com.alihamza97.ordersmanagementservice.mapper;
+package com.alihamza97.carservice.mapper;
 
-import com.alihamza97.ordersmanagementservice.dto.CarRequest;
-import com.alihamza97.ordersmanagementservice.dto.CarResponse;
-import com.alihamza97.ordersmanagementservice.model.Car;
-import org.mapstruct.Mapper;
+import com.alihamza97.carservice.dto.CarRequest;
+import com.alihamza97.carservice.dto.CarResponse;
+import com.alihamza97.carservice.model.Car;
 import org.springframework.stereotype.Component;
-
-import java.util.UUID;
 
 
 @Component
@@ -18,7 +15,6 @@ public class CarMapper {
         }
 
         Car car = new Car();
-        car.setId(UUID.randomUUID().toString());
         car.setCarName(req.getCarName());
         car.setCarModel(req.getCarModel());
         car.setCarPrice(req.getCarPrice());

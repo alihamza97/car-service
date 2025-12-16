@@ -1,4 +1,4 @@
-package com.alihamza97.ordersmanagementservice;
+package com.alihamza97.carservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

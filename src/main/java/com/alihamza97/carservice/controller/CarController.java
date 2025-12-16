@@ -1,8 +1,9 @@
-package com.alihamza97.ordersmanagementservice.controller;
+package com.alihamza97.carservice.controller;
 
-import com.alihamza97.ordersmanagementservice.dto.CarRequest;
-import com.alihamza97.ordersmanagementservice.model.Car;
-import com.alihamza97.ordersmanagementservice.service.CarService;
+import com.alihamza97.carservice.dto.CarRequest;
+import com.alihamza97.carservice.model.Car;
+import com.alihamza97.carservice.service.CarService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class CarController {
     private final CarService carService;
 
     @PostMapping
-    public ResponseEntity<Car> createOrder(@RequestBody CarRequest request) {
+    public ResponseEntity<Car> createOrder(@Valid @RequestBody CarRequest request) {
         log.info("Creating new car order with request: {}", request);
         Car createdCar = carService.createCar(request);
         log.info("Successfully created car with id: {}", createdCar.getId());
@@ -36,7 +37,7 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Car> getCarById(@PathVariable String id) {
+    public ResponseEntity<Car> getCarById(@PathVariable Long id) {
         log.info("Fetching car with id: {}", id);
         Car car = carService.getById(id);
         log.info("Successfully retrieved car with id: {}", id);

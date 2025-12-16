@@ -1,9 +1,9 @@
-package com.alihamza97.ordersmanagementservice.service;
+package com.alihamza97.carservice.service;
 
-import com.alihamza97.ordersmanagementservice.dto.CarRequest;
-import com.alihamza97.ordersmanagementservice.mapper.CarMapper;
-import com.alihamza97.ordersmanagementservice.model.Car;
-import com.alihamza97.ordersmanagementservice.repository.CarRepository;
+import com.alihamza97.carservice.dto.CarRequest;
+import com.alihamza97.carservice.mapper.CarMapper;
+import com.alihamza97.carservice.model.Car;
+import com.alihamza97.carservice.repository.CarRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -18,20 +18,26 @@ public class CarService {
     private final CarRepository carRepository;
     private final CarMapper carMapper;
 
-    public List<Car> getAll() {
+        public List<Car> getAll() {
         log.debug("Retrieving all cars from database");
         List<Car> cars = carRepository.findAll();
         log.debug("Found {} cars", cars.size());
         return cars;
     }
+//    public Page<Car> getAll(int pageNumber,int size) {
+//        log.debug("Retrieving all cars from database");
+//        Pageable pageable= PageRequest.of(pageNumber,size);
+//        Page<Car> cars = carRepository.findAll(pageable);
+////        log.debug("Found {} cars", cars.size());
+//        return cars;
+//    }
 
-    public Car getById(String id) {
+    public Car getById(Long id) {
         log.debug("Searching for car with id: {}", id);
-        Car car = carRepository.findById(id)
-                .orElseThrow(() -> {
-                    log.error("Car not found with id: {}", id);
-                    return new RuntimeException("Car not found");
-                });
+        Car car = carRepository.findById(id).orElseThrow(() -> {
+            log.error("Car not found with id: {}", id);
+            return new RuntimeException("Car not found");
+        });
         log.debug("Successfully found car with id: {}", id);
         return car;
     }

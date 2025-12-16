@@ -1,0 +1,11 @@
+---- Drop constraint if exists
+--IF EXISTS (SELECT * FROM sys.check_constraints WHERE name = 'CK__cars__condition')
+--    ALTER TABLE cars DROP CONSTRAINT CK__cars__condition;
+--
+---- Convert existing VARCHAR prices to DECIMAL
+---- This will fail if you have non-numeric data in car_price
+--ALTER TABLE cars ALTER COLUMN car_price DECIMAL(10,2) NOT NULL;
+--
+---- Re-add check constraint for condition if it was dropped
+--ALTER TABLE cars ADD CONSTRAINT CK_cars_condition
+--    CHECK (condition IN ('NEW', 'USED'));

@@ -1,0 +1,48 @@
+package com.alihamza97.carservice.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "cars")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Car {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Car name cannot be empty")
+    @Column(name = "car_name", nullable = false, length = 100)
+    private String carName;
+
+    @NotBlank(message = "Car model cannot be empty")
+    @Column(name = "car_model", nullable = false, length = 100)
+    private String carModel;
+
+    @NotNull(message = "Car price is required")
+    @Column(name = "car_price", nullable = false, precision = 10, scale = 2)
+    private BigDecimal carPrice;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "condition", length = 10)
+    private CarCondition condition;
+
+    @Column(name = "created_at", nullable = false, updatable = false)
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @Column(name = "updated_at")
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+}
