@@ -16,6 +16,7 @@ import java.util.List;
 @RequestMapping("/api/cars")
 @RequiredArgsConstructor
 @Slf4j
+@CrossOrigin
 public class CarController {
 
     private final CarService carService;
